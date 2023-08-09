@@ -62,8 +62,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 
@@ -104,7 +102,6 @@ header img{
 .introMessage p{
     margin:0px;
     animation: sobeSecao .6s ease-in-out forwards;
-
 }
 
 .introMessage p::after {
@@ -123,10 +120,10 @@ header img{
 /*Nav Bar*/
 .navBar {
     width: 100%;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    align-items: center;
     font-family: 'Poppins';
     font-weight: bold;
     padding: 10px;
@@ -137,17 +134,19 @@ header img{
     z-index: 9999;
 }
 
+#navMenuButton{
+    display:none;
+}
+
 .navBar ul{
     display: flex;
     list-style-type: none;
     font-size: large;
-    gap:30px;
-
 }
 
 .navBar ul li {
     height: 50px;
-    width: 80px;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,6 +403,7 @@ footer {
     color: gray;
     padding: 30px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .footerContent p{
@@ -459,7 +459,7 @@ footer {
 
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 780px){
     #projectsSection{
         display: grid;
         grid-template-columns: 100%;
@@ -482,11 +482,97 @@ footer {
     }
 
     .introMessage p{
-        display:none;
+        display: none;
     }
 
     .project{
         grid-template-rows: 5% 10% 45% 10% 4% 14% 12%;
     }
+
+}
+
+@media only screen and (max-width: 900px){
+    /*Responsive navbar*/
+    #navMenuButton{
+        display: flex;
+        padding: .5rem 1.5 rem;
+        font-size: 1rem;
+        font-family: 'Poppins';
+        font-weight: bold;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color:#8484ac;
+        gap: .5rem;
+    }
+
+    #navMenuButton #hamburger{
+        display: block;
+        border-top: 2px solid;
+        margin-top: 3px;
+    }
+
+    #navMenuButton #hamburger::after, #hamburger::before{
+        width: 20px;
+        margin-top: 5px;
+        content: "";
+        display: block;
+        height: 1.5px;
+        border-top: 2px solid;
+    }
+
+    #navMenuItens{
+        display: block;
+        position: absolute;
+        right: -380px;
+        width: 50%;
+        min-width: 150px;
+        top: 10vh;
+        height: 100vh;
+        z-index: 1000;
+        transition: 1s;
+        visibility: hidden;
+    }
+
+    #navMenuItens.active{
+        right: 0px;
+        background-color: #431f47;
+        visibility: visible;
+    }
+
+    #navMenuItens.active #navButtons{
+        display: block;
+    } 
+
+    #navMenuItens.active ul{
+        flex-direction: column;
+        padding: 0px;
+        gap: 0px;
+        margin-top: 1px;
+    }
+
+    #navMenuItens.active ul li{
+        width: 100%;
+        justify-content: start;
+        border-radius: 3px;
+        background-color: #431f47;
+        transition: all 800ms;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    }
+    
+    #navMenuItens.active ul #li1{
+        border-top: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    #navMenuItens.active ul li:hover{
+        background-color: #bc54c5c1;
+    }
+
+    #navMenuItens.active ul li a{
+        padding: 1px 100% 10px 15px;
+    }
+
+    /*Hamburger button*/
+    
 
 }

@@ -1,3 +1,4 @@
+//Efeito de digitando
 function typingEffect(element) {
     const arrayText = element.innerHTML.split('');
     element.innerHTML = '';
@@ -13,3 +14,11 @@ const title2 = document.querySelector('.typing2');
 
 typingEffect(title);
 typingEffect(title2);
+
+//Menu responsivo
+const menuButton = document.getElementById("navMenuButton");
+
+function toggleMenu(){
+    const nav = document.getElementById("navMenuItens");
+    nav.classList.toggle('active')
+}
