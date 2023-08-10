@@ -314,7 +314,7 @@ main section div{
 }
 
 .project img{
-    filter: grayscale(100%);
+    filter: grayscale(35%);
     transition: filter 0.5s, border 0.1s, transform 0.1s;
     border: solid 1px #0000005b;
     border-radius: 5px;
