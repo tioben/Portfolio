@@ -255,6 +255,7 @@ main section div{
 
 .hab h3 {
     padding-left: 30px;
+    margin-bottom: 10px;
 }
 .hab ul{
     margin-left: 30px;;
@@ -313,7 +314,7 @@ main section div{
 }
 
 .project img{
-    filter: grayscale(50%);
+    filter: grayscale(100%);
     transition: filter 0.5s, border 0.1s, transform 0.1s;
     border: solid 1px #0000005b;
     border-radius: 5px;
@@ -487,6 +488,20 @@ footer {
 
     .project{
         grid-template-rows: 5% 10% 45% 10% 4% 14% 12%;
+    }
+
+    .hab {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 25vh;
+    }
+
+    .hab ul{
+        margin: 0px;
+        position: absolute;
+        top: 40%;
+        left: 25%;
     }
 
 }
