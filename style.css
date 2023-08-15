@@ -385,8 +385,13 @@ main section div{
     margin-left: 15px;
     background-image: url(img/play-button-ok.png);
     transition: all 0.8s;
-
 }
+
+#link-play-ndisponivel {
+    background-image: url(img/play-button-nok.png);
+    cursor: auto;
+}
+
 
 .link-play-disponivel:hover {
     background-image: url(img/play-button-ok2.png);
