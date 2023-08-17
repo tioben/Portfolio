@@ -284,7 +284,7 @@ main section div{
 .project{
     display:grid;
     box-sizing: border-box;
-    grid-template-rows: 5% 10% 40% 5% 14% 14% 12%;
+    grid-template-rows: 5% 8% 40% 9% 12% 14% 12%;
     align-items: center;
     height: 100vh;
     padding: 0px 30px;
@@ -331,7 +331,12 @@ main section div{
 }
 
 .project ul{
-    justify-content: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
     width:100%;
     font-size: larger;
 }
